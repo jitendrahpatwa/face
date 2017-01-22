@@ -88,8 +88,8 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
         }, function (err) {
             alert('can not load image');
       });*/
-      $scope.imgTaken1 = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Abhi_2014.jpg/220px-Abhi_2014.jpg";
-      $scope.modeldata.postImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Abhi_2014.jpg/220px-Abhi_2014.jpg";
+      $scope.imgTaken1 = "img/mike.png";
+      $scope.modeldata.postImg = "img/mike.png";
     }
 
     $scope.enroll = function(){
@@ -363,6 +363,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
         console.log('Body:', this.responseText);
         $ionicLoading.hide();
         var response = JSON.parse(this.responseText);
+        alert(this.responseText);
         angular.forEach(response,function(value,key){
           if(key == "Errors"){
             console.log(response.Errors[0].Message);
