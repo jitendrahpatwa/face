@@ -363,7 +363,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
         console.log('Status:', this.status);
         console.log('Headers:', this.getAllResponseHeaders());
         console.log('Body:', this.responseText);
-        alert("fetching..."+this.responseText);
+        //alert("fetching..."+this.responseText);
         $ionicLoading.hide();
         var response = JSON.parse(this.responseText);
         //alert(this.responseText);
