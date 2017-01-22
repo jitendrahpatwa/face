@@ -42,8 +42,8 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
       'backImg':''
     }
     $scope.capturegallery = function(){
-      $log.warn("capturegallery");
-      /*var options = {
+      //$log.warn("capturegallery");
+      var options = {
           quality: 75,
           destinationType: Camera.DestinationType.DATA_URL,
           sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
@@ -61,9 +61,9 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
           $scope.modeldata.postImg = "data:image/jpeg;base64," + imageData;
       }, function (err) {
           alert('can not load image');
-      });*/
-      $scope.imgTaken1 = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/TigerShroff.jpg/220px-TigerShroff.jpg";
-      $scope.modeldata.postImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/TigerShroff.jpg/220px-TigerShroff.jpg";
+      });
+      // $scope.imgTaken1 = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/TigerShroff.jpg/220px-TigerShroff.jpg";
+      // $scope.modeldata.postImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/TigerShroff.jpg/220px-TigerShroff.jpg";
     }
 
     $scope.capturecamera = function(){
@@ -351,6 +351,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
   console.log('HubCtrl');
   $scope.callface = function(){
     //gallery
+    alert("Loading...");
     $ionicLoading.show({ template: '<ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>' });
     var request = new XMLHttpRequest();
     request.open('POST', 'https://api.kairos.com/gallery/list_all');
