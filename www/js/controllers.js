@@ -43,7 +43,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
     }
     $scope.capturegallery = function(){
       //$log.warn("capturegallery");
-      alert("capturegallery");
+      //alert("capturegallery");
       var options = {
           quality: 75,
           destinationType: Camera.DestinationType.DATA_URL,
@@ -68,8 +68,8 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
     }
 
     $scope.capturecamera = function(){
-      $log.warn("capturecamera");
-      /*var options = {
+      //$log.warn("capturecamera");
+      var options = {
           quality: 75,
           destinationType: Camera.DestinationType.DATA_URL,
           sourceType: Camera.PictureSourceType.CAMERA,
@@ -88,9 +88,9 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
             $scope.modeldata.postImg = "data:image/jpeg;base64," + imageData;
         }, function (err) {
             alert('can not load image');
-      });*/
-      $scope.imgTaken1 = "img/mike.png";
-      $scope.modeldata.postImg = "img/mike.png";
+      });
+      // $scope.imgTaken1 = "img/mike.png";
+      // $scope.modeldata.postImg = "img/mike.png";
     }
 
     $scope.enroll = function(){
@@ -213,7 +213,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
     }
     $scope.capturegallery = function(){
       $log.warn("capturegallery");
-      /*var options = {
+      var options = {
           quality: 75,
           destinationType: Camera.DestinationType.DATA_URL,
           sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
@@ -231,14 +231,14 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
           $scope.modeldata.postImg = "data:image/jpeg;base64," + imageData;
       }, function (err) {
           alert('can not load image');
-      });*/
-      $scope.imgTaken2 = "http://www.medictips.com/wp-content/uploads/2016/04/tiger-shroff-fitness-mantra-and-workout-routine.png";
-      $scope.modeldata.postImg = "http://www.medictips.com/wp-content/uploads/2016/04/tiger-shroff-fitness-mantra-and-workout-routine.png";
+      });
+      // $scope.imgTaken2 = "http://www.medictips.com/wp-content/uploads/2016/04/tiger-shroff-fitness-mantra-and-workout-routine.png";
+      // $scope.modeldata.postImg = "http://www.medictips.com/wp-content/uploads/2016/04/tiger-shroff-fitness-mantra-and-workout-routine.png";
     }
 
     $scope.capturecamera = function(){
       $log.warn("capturecamera");
-      /*var options = {
+      var options = {
           quality: 75,
           destinationType: Camera.DestinationType.DATA_URL,
           sourceType: Camera.PictureSourceType.CAMERA,
@@ -257,9 +257,9 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
             $scope.modeldata.postImg = "data:image/jpeg;base64," + imageData;
         }, function (err) {
             alert('can not load image');
-      });*/
-      $scope.imgTaken2 = "http://i.ndtvimg.com/i/2015-07/abhishek-bachchan_640x480_71435832454.jpg";
-      $scope.modeldata.postImg = "http://i.ndtvimg.com/i/2015-07/abhishek-bachchan_640x480_71435832454.jpg";
+      });
+      // $scope.imgTaken2 = "http://i.ndtvimg.com/i/2015-07/abhishek-bachchan_640x480_71435832454.jpg";
+      // $scope.modeldata.postImg = "http://i.ndtvimg.com/i/2015-07/abhishek-bachchan_640x480_71435832454.jpg";
     }
 
     $scope.recognize = function(){
@@ -366,7 +366,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
         alert("fetching..."+this.responseText);
         $ionicLoading.hide();
         var response = JSON.parse(this.responseText);
-        alert(this.responseText);
+        //alert(this.responseText);
         angular.forEach(response,function(value,key){
           if(key == "Errors"){
             console.log(response.Errors[0].Message);
