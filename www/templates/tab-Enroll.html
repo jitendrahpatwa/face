@@ -7,8 +7,8 @@
   <ion-content style="text-align: center;">
   	<form name="myForm" id="myForm">
   		<!-- <img id="postImg" class="circleBase type3 postImg" ng-model="modeldata.postImg" src="img/user.png"> -->
-  		<img id="postImg" class="circleBase type3 postImg"  ng-show="imgTaken1 !== undefined" ng-src="{{imgTaken1}}" ng-model="modeldata.postImg">
-		<img id="postImg" ng-show="imgTaken1 === undefined" class="circleBase type3 postImg"  ng-model="modeldata.postImg" ng-src="http://sekho.in/wp-content/uploads/2016/09/Abhishek-Bachchan-Family-Photos-Age-Father-And-Mother-Wife-Biography.jpg">
+  		<img id="postImg" class="circleBase type3 postImg"  ng-show="imgTaken1 !== undefined" src="{{imgTaken1}}" ng-model="modeldata.postImg">
+		<img id="postImg" ng-show="imgTaken1 === undefined" class="circleBase type3 postImg"  ng-model="modeldata.postImg" src="http://sekho.in/wp-content/uploads/2016/09/Abhishek-Bachchan-Family-Photos-Age-Father-And-Mother-Wife-Biography.jpg">
 
   		<br>
   		<div class="list list-inset" style="text-align: center;">
@@ -35,8 +35,8 @@
 		</button>
 		<br><br>
 		<!-- <img id="backImg" class="backImg" src="img/mike.png" ng-model="modeldata.backImg" hidden="true"> -->
-		<img id="backImg" class="backImg"  ng-show="imgTaken1 !== undefined" ng-src="{{imgTaken1}}" ng-model="modeldata.backImg"  hidden="true" style="text-align: center">
-		<img ng-show="imgTaken1 === undefined" ng-model="modeldata.backImg" ng-src="img/user.png" style="text-align: center"  hidden="true">
+		<img id="backImg" class="backImg"  ng-show="imgTaken1 !== undefined" src="{{imgTaken1}}" ng-model="modeldata.backImg"  hidden="true" style="text-align: center">
+		<img ng-show="imgTaken1 === undefined" ng-model="modeldata.backImg" src="img/user.png" style="text-align: center"  hidden="true">
 	</form>
   </ion-content>
 </ion-view>

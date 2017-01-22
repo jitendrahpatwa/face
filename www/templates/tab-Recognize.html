@@ -7,8 +7,8 @@
   <ion-content style="text-align: center;">
   	<form name="myForm" id="myForm">
   		<!-- <img id="postImg" class="circleBase type3 postImg" ng-model="modeldata.postImg" src="img/user2.png"> -->
-  		<img id="postImg" class="circleBase type3 postImg"  ng-show="imgTaken2 !== undefined" ng-src="{{imgTaken2}}" ng-model="modeldata.postImg">
-		<img id="postImg" ng-show="imgTaken2 === undefined" class="circleBase type3 postImg"  ng-model="modeldata.postImg" ng-src="img/user2.png">
+  		<img id="postImg" class="circleBase type3 postImg"  ng-show="imgTaken2 !== undefined" src="{{imgTaken2}}" ng-model="modeldata.postImg">
+		<img id="postImg" ng-show="imgTaken2 === undefined" class="circleBase type3 postImg"  ng-model="modeldata.postImg" src="img/user2.png">
 
   		<br>
   		<div class="row">
@@ -28,8 +28,8 @@
 		 <i class="icon ion-paper-airplane"></i> Recognize My Face
 		</button>
 		<br>
-		<img id="backImg" class="backImg"  ng-show="imgTaken2 !== undefined" ng-src="{{imgTaken2}}" ng-model="modeldata.backImg"  style="text-align: center"  hidden="true">
-		<img ng-show="imgTaken2 === undefined" ng-model="modeldata.backImg" ng-src="img/user2.png" style="text-align: center"  hidden="true">
+		<img id="backImg" class="backImg"  ng-show="imgTaken2 !== undefined" src="{{imgTaken2}}" ng-model="modeldata.backImg"  style="text-align: center"  hidden="true">
+		<img ng-show="imgTaken2 === undefined" ng-model="modeldata.backImg" src="img/user2.png" style="text-align: center"  hidden="true">
 	</form>
   </ion-content>
 </ion-view>
