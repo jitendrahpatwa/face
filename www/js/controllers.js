@@ -43,6 +43,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
     }
     $scope.capturegallery = function(){
       //$log.warn("capturegallery");
+      alert("capturegallery");
       var options = {
           quality: 75,
           destinationType: Camera.DestinationType.DATA_URL,
