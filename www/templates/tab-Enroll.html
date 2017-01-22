@@ -1,0 +1,42 @@
+<ion-view view-title="Enroll">
+	<ion-nav-buttons side="right">
+      <button class="button" ng-click="doSomething()">
+        <i class="icon ion-android-options"></i>
+      </button>
+    </ion-nav-buttons>
+  <ion-content style="text-align: center;">
+  	<form name="myForm" id="myForm">
+  		<!-- <img id="postImg" class="circleBase type3 postImg" ng-model="modeldata.postImg" src="img/user.png"> -->
+  		<img id="postImg" class="circleBase type3 postImg"  ng-show="imgTaken1 !== undefined" ng-src="{{imgTaken1}}" ng-model="modeldata.postImg">
+		<img id="postImg" ng-show="imgTaken1 === undefined" class="circleBase type3 postImg"  ng-model="modeldata.postImg" ng-src="img/user.png">
+
+  		<br>
+  		<div class="list list-inset" style="text-align: center;">
+  		<center><label class="item item-input item-floating-label clsinput" style="text-align: center;">
+		    <span class="input-label txtnamespan">My Name</span>
+		    <input type="text" id="postName" class="txtname postName" ng-model="modeldata.postName" placeholder="My Good Name" >
+		</label></center>
+		</div>
+  		<div class="row">
+		  <div class="col">
+		  	<button class="button button-calm" ng-click="capturegallery()">
+			  Gallery <i class="icon ion-android-image"></i>
+			</button>
+		  </div>
+		  <div class="col">
+		  	<button class="button button-calm" ng-click="capturecamera()">
+			  Camera <i class="icon ion-android-camera"></i>
+			</button>
+		  </div>
+		</div>
+
+		<button class="button button-positive" ng-click="enroll()">
+		  <i class="icon ion-upload"></i> Enroll Me To Authenticate
+		</button>
+		<br><br>
+		<!-- <img id="backImg" class="backImg" src="img/mike.png" ng-model="modeldata.backImg" hidden="true"> -->
+		<img id="backImg" class="backImg"  ng-show="imgTaken1 !== undefined" ng-src="{{imgTaken1}}" ng-model="modeldata.backImg"  hidden="true" style="text-align: center">
+		<img ng-show="imgTaken1 === undefined" ng-model="modeldata.backImg" ng-src="img/user.png" style="text-align: center"  hidden="true">
+	</form>
+  </ion-content>
+</ion-view>

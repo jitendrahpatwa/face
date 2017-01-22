@@ -1,0 +1,40 @@
+<ion-view view-title="Gallery Hub">
+    <ion-nav-buttons side="right">
+      <button class="button" ng-click="doSomething()">
+        <i class="icon ion-home"></i>
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="padding" style="text-align: center;">
+    <h4 ng-click="callface()">Welcome to Face Recognition</h4>
+    
+    <div ng-show="gallery_ids !== ''">
+      <p><b>List Of All Galleries</b></p>
+      <div class="list list-inset">
+          <div class="item" ng-repeat="gallery in gallery_ids">
+            <span ng-click="callSubjects('{{gallery}}')">{{gallery}} <i class="icon ion-ios-eye"></i></span>
+          </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div ng-show="subjects !== ''">
+      <p><b>List Of All {{galle}} Subject Users</b></p>
+      <div class="list card">
+
+        <!-- <a href="javascript:void(0)" class="item item-icon-left" ng-repeat="sname in subjects">
+          <i class="icon ion-ios-telephone"></i>
+          {{sname}}
+        </a> -->
+
+        <div class="list">
+          <a class="item item-avatar" href="javascript:void(0)" ng-repeat="sname in subjects">
+            <img src="img/ionic.png">
+            <h2>{{sname}}</h2>
+            <p>Back off, man. I'm a scientist.</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
