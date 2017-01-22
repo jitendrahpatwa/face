@@ -351,6 +351,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
   console.log('HubCtrl');
   $scope.callface = function(){
     //gallery
+    $ionicLoading.show({ template: '<ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>' });
     var request = new XMLHttpRequest();
     request.open('POST', 'https://api.kairos.com/gallery/list_all');
     request.setRequestHeader('app_id', '330e2c9a');
@@ -360,7 +361,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
         console.log('Status:', this.status);
         console.log('Headers:', this.getAllResponseHeaders());
         console.log('Body:', this.responseText);
-
+        $ionicLoading.hide();
         var response = JSON.parse(this.responseText);
         angular.forEach(response,function(value,key){
           if(key == "Errors"){
@@ -381,7 +382,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
     request.send();
   };
 
-  
+
   $scope.doSomething = function(){
     console.log("1");
     $state.go("tab.Enroll");
