@@ -352,7 +352,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
   console.log('HubCtrl');
   $scope.callface = function(){
     //gallery
-    alert("Loading...");
+    //alert("Loading...");
     $ionicLoading.show({ template: '<ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>' });
     var request = new XMLHttpRequest();
     request.open('POST', 'https://api.kairos.com/gallery/list_all');
@@ -363,6 +363,7 @@ app.controller('EnrollCtrl', function($scope,$log,$state,$ionicPopup,$timeout,$i
         console.log('Status:', this.status);
         console.log('Headers:', this.getAllResponseHeaders());
         console.log('Body:', this.responseText);
+        alert("fetching..."+this.responseText);
         $ionicLoading.hide();
         var response = JSON.parse(this.responseText);
         alert(this.responseText);
